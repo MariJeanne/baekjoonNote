@@ -1,13 +1,14 @@
 #include <stdio.h>
 int main(){
-    long int a, b, c;
-    int i;
-    scanf("%ld %ld %ld", &a, &b, &c);
-    if(b==c ||(a==0&&b>=c)){
-        printf("-1");
-        return 0;
+    int a, b, c, i, bef;
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if(b>c || a==0) bef = 0;
+    else if(b==c) bef = -1;
+    else{ 
+        for(i=1;;i++) if(c*i>(a+b*i)) break;
+        bef = i;
     }
-    for(i=1;;i++) if(c*i>(a+b*i)) break;
     printf("%d", i);
     return 0;
 }
