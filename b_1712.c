@@ -1,7 +1,13 @@
 #include <stdio.h>
 int main(){
-    int a, b, c, i;
-    scanf("%d %d %d", &a, &b, &c);
-    for(i=1; ; i++) if(c*i > (a + b*i) ) break;
+    long int a, b, c;
+    int i;
+    scanf("%ld %ld %ld", &a, &b, &c);
+    if(b==c ||(a==0&&b>=c)){
+        printf("-1");
+        return 0;
+    }
+    for(i=1;;i++) if(c*i>(a+b*i)) break;
     printf("%d", i);
+    return 0;
 }
