@@ -3,9 +3,7 @@
 
 int main(){
     int a, b;
-    while(1){
-        fscanf(stdin, "%d %d", &a, &b);
-        if(a == EOF) break;
+    while(fscanf(stdin, "%d %d", &a, &b) != EOF){
         printf("%d\n", a+b);
     }
 }
